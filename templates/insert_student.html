@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+          }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+          }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+          }
+
+
+        input[type="reset"] {
+            background-color: #1d9206;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-left: 30px;
+          }
+        input[type="reset"]:hover {
+            background-color: #145f05;
+            
+          }
+
+        .elements{
+            background-color: #00ffea;
+            color: #030303;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        h1{
+            background-color: rgb(255, 251, 0);
+        }
+        /* Style text inputs and textareas */
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 16px;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <center>
+    <div class="form-container">
+    
+        <h1>insert_student</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="elements">
+            {{SFEO.as_p}}
+            </div>
+            <input type="submit" value="insert" >
+            <input type="reset" value="refresh">
+        </form>
+    </center>
+    </div>
+</body>
+</html>
